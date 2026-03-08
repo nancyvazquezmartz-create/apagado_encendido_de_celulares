@@ -1,0 +1,6 @@
+Creamos una cuenta Celular que guarda el id, dueños y estado.
+Para registrar un celular nuevo, usas registrar_celular que crea la cuenta en la blockchain.
+Para cambiar el estado entre Apagado y Encendido tienes cambiar_estado.
+El cambio solo puede hacerlo el dueño (se verifica que el firmante coincida).
+Se usan PDAs para asegurar que las cuentas están controladas por el programa y vinculadas al dueño.
+El identificador celular_id podría asociarse luego con un NFT creado vía Metaplex para dar más confianza y verificación.
