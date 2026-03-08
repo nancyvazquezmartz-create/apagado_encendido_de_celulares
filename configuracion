@@ -1,0 +1,17 @@
+1. Registro (El "Emparejamiento")
+Cuando el usuario configura su celular por primera vez:
+ * Identidad Digital: Se genera un NFT (Soulbound) o un token único que representa ese dispositivo físico.
+ * Billetera Maestra: El usuario vincula ese NFT a una "Billetera de Emergencia" (puede ser una cuenta en su computadora o una frase semilla guardada físicamente).
+ * Estado Inicial: En un Smart Contract (Programa de Solana), el estado del dispositivo se marca como Status: Active.
+2. El Incidente (Bloqueo Remoto)
+Si el celular es robado o se pierde:
+ * Activación: El usuario accede a su "Billetera de Emergencia" desde cualquier otro dispositivo (usando un Solana Blink o una dApp simple).
+ * Transacción: Firma una transacción que interactúa con el Smart Contract para cambiar el estado de su dispositivo: de Active a Locked.
+ * Inmutabilidad: Una vez que la transacción se confirma en la red de Solana (en menos de 2 segundos), nadie puede revertir ese estado sin la clave privada del dueño.
+3. La Ejecución (El "Apagado")
+Aquí es donde el software del celular interactúa con la blockchain:
+ * Monitoreo: El celular tiene un servicio en segundo plano que "observa" el estado de su NFT correspondiente en Solana.
+ * Orden de Bloqueo: En cuanto el servicio detecta el cambio a Status: Locked, el sistema operativo activa el protocolo de seguridad.
+ * Acciones Automáticas: * Cifrado total de la memoria local mediante Seed Vault.
+   * Cierre de sesiones de todas las apps.
+   * Apagado del sistema o bloqueo de pantalla persistente (imposible de saltar sin la firma del dueño).
